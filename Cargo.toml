@@ -1,0 +1,24 @@
+[package]
+name = "metra"
+description = "Text User Interface [matrix] client"
+readme = "README.md"
+repository = "https://github.com/krissemicolon/metra"
+keywords = ["TUI", "matrix"]
+version = "0.1.0"
+authors = ["krissemicolon <krissemicolon@gmail.com>"]
+edition = "2018"
+license-file = "LICENSE"
+
+[dependencies]
+# TUI
+tui = "0.13"
+termion = "1.5"
+# Notifications
+notify-rust = "4"
+# Matrix SDK
+[dependencies.matrix-sdk]
+git = "https://github.com/matrix-org/matrix-rust-sdk"
+rev = "40c53f0"
+default_features = false
+features = ["encryption", "sqlite_cryptostore", "messages", "rustls-tls", "unstable-synapse-quirks"]
+
